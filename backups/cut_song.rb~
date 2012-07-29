@@ -1,0 +1,63 @@
+class CutSong < ActiveRecord::Base
+  # attr_accessible :title, :body
+  belongs_to :uploaded_song
+  
+  #=======================#
+  # Parse seconds to min:sec 
+  # input : 134
+  # output 2.14
+  #=======================# 
+  def parse(duration)
+    min = duration / 60
+    sec = duration % 60
+    return "#{min}.#{sec}"
+  end
+  
+  def max(first,second)
+    if first > second
+      return first
+    else
+      return second
+    end
+  end
+  
+  def min(first,second)
+    if first < second
+      return first
+    else
+      return second
+    end
+  end
+  
+
+  #=====================================#
+  # Executing mp3splt and saving the output
+  # output is in same audios folder 
+  # TODO: Handle edge cases
+  #====================================#
+ def mp3splt(start_duration,end_duration)
+    # resolving issues on reverse cut
+    self.start_duration = min(start_duration,end_duration)
+    self.end_duration = max(start_duration,end_duration)
+    self.duration = self.end_duration - self.start_duration
+    self.save
+    # execute the mp3splt command
+    command = `mp3splt \"#{self.uploaded_song.path}\" #{parse(start_duration)} #{parse(end_duration)}`
+    # read cut file name from the log
+    cut_song_path = command.split('"')[1]
+    self.path = cut_song_path if cut_song_path.include? ".mp3"
+    self.save
+  end
+  
+  def set_fingerprint
+    result = `fpcalc "#{self.path}"`
+    self.finger_print = result.split('FINGERPRINT=')[1].chomp
+    self.save
+  end
+  
+  def get_ws_info
+    uri = URI("http://api.acoustid.org/v2/lookup?client=8XaBELgH&meta=recordings+releasegroups+compress&duration=#{self.duration}&fingerprint=#{self.finger_print}")
+    result = Net::HTTP.get(uri) # => String
+    puts result
+  end
+end

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicCutter</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%if controller.controller_name != "authentications" and controller.controller_name != "registrations"%>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <a class="brand" href="#">Music Cutter</a>
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li >
+          <a href="#">My Clips</a>
+        </li>
+         <li >
+          <a href="#">Shared Clips</a>
+        </li>
+      </ul>
+
+      <%= render :partial => "layouts/login_links"%>
+    </div>
+  </div>
+</div>
+<%end%>
+<%if flash[:notice]%>
+<div class="alert alert-info">
+<button class="close" data-dismiss="alert">×</button>
+<%= flash.notice %>
+</div>
+<%end%>
+<%if flash[:alert]%>
+<div class="alert alert-error">
+<button class="close" data-dismiss="alert">×</button>
+<%= flash.alert %></div>
+
+<%end%>
+
+<%= yield %>
+<script language="javascript">
+
+//Change these values to style your modal popup
+var align = 'center';									//Valid values; left, right, center
+var top = 10; 											//Use an integer (in pixels)
+var width = 500; 										//Use an integer (in pixels)
+var padding = 10;										//Use an integer (in pixels)
+var backgroundColor = '#FFFFFF'; 						//Use any hex code
+var source_signup = '/users/sign_up'; 
+var source_login='<%=authentications_url%>';							//Refer to any page on your server, external pages are not valid e.g. http://www.google.co.uk
+var borderColor = '#333333'; 							//Use any hex code
+var borderWeight = 4; 									//Use an integer (in pixels)
+var borderRadius = 5; 									//Use an integer (in pixels)
+var fadeOutTime = 300; 									//Use any integer, 0 = no fade
+var disableColor = '#666666'; 							//Use any hex code
+var disableOpacity = 40; 								//Valid range 0-100
+var loadingImage = 'loading.gif';		//Use relative path from this page
+
+    $(document).ready(function() {
+			
+		//This method initialises the modal popup
+        $(".sign_up_popup").click(function() {
+            modalPopup(align, top, width, padding, disableColor, disableOpacity, backgroundColor, borderColor, borderWeight, borderRadius, fadeOutTime, source_signup, loadingImage);
+        });
+
+        $(".login_popup").click(function() {
+            modalPopup(align, top, width, padding, disableColor, disableOpacity, backgroundColor, borderColor, borderWeight, borderRadius, fadeOutTime, source_login, loadingImage);
+        });
+
+		
+		//This method hides the popup when the escape key is pressed
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) {
+				closePopup(fadeOutTime);
+			}
+		});
+		
+    });
+	
+</script>
+<script type="text/javascript">
+function ModalPopupsIndicator2() {
+    ModalPopups.Indicator("idIndicator2",
+        "Please wait",
+        "<div style=''>" + 
+        "<div style='float:left;'><img src='spinner.gif'></div>" + 
+        "<div style='float:left; padding-left:10px;'>" + 
+        "Saving address information... <br/>" + 
+        "Cutting the Song .This may take 3 seconds." + 
+        "</div>", 
+        {
+            width: 300,
+            height: 100
+        }
+    );
+            
+    setTimeout('ModalPopups.Close(\"idIndicator2\");', 3000);
+}
+</script>
+
+
+</body>
+
+</html>

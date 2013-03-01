@@ -1,6 +1,0 @@
-class ThingsController < ApplicationController
-  def index
-    @mes = Me.all
-  end
-
-end

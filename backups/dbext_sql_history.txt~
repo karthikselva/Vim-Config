@@ -1,5 +1,0 @@
-dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:50)
-1. select * from uploaded_songs
-2. select * from cut_songs
-3. select * from README
-4. select * from source

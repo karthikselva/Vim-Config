@@ -1,0 +1,226 @@
+Fast Debugger (ruby-debug-ide 0.4.16, ruby-debug-base 0.10.4) listens on 127.0.0.1:39767
+=> Booting WEBrick
+=> Rails 2.3.2 application starting on http://0.0.0.0:3000
+/home/karthikselva/.rvm/gems/ruby-1.8.7-p358/gems/rails-2.3.2/lib/rails/gem_dependency.rb:99:Warning: Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+Use of ole/file_system is deprecated. Use ole/storage (the file_system api
+is recommended and enabled by default).
+
+/home/karthikselva/Projects/release-12.4-branch/vendor/plugins/mail_fetcher/lib/net/pop.rb:199: warning: already initialized constant Revision
+/home/karthikselva/Projects/release-12.4-branch/vendor/plugins/mail_fetcher/lib/net/pop.rb:687: warning: already initialized constant POP
+/home/karthikselva/Projects/release-12.4-branch/vendor/plugins/mail_fetcher/lib/net/pop.rb:688: warning: already initialized constant POPSession
+/home/karthikselva/Projects/release-12.4-branch/vendor/plugins/mail_fetcher/lib/net/pop.rb:689: warning: already initialized constant POP3Session
+/home/karthikselva/Projects/release-12.4-branch/vendor/plugins/mail_fetcher/lib/net/pop.rb:702: warning: already initialized constant APOPSession
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2012-11-28 16:05:48] INFO  WEBrick 1.3.1
+[2012-11-28 16:05:48] INFO  ruby 1.8.7 (2012-02-08) [x86_64-linux]
+[2012-11-28 16:05:53] WARN  TCPServer Error: Address already in use - bind(2)
+[2012-11-28 16:05:53] INFO  WEBrick::HTTPServer#start: pid=22410 port=3000
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mConfigParameter Load (0.1ms)[0m   [0;1mSELECT * FROM `config_parameters` WHERE (name = 'is_csrf_enabled') LIMIT 1[0m
+  [4;35;1mConfigValue Load (0.1ms)[0m   [0mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 30 AND (user_id IS NULL)) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+
+
+Processing LoginController#login (for 127.0.0.1 at 2012-11-28 16:05:59) [GET]
+  Parameters: {"action"=>"login", "controller"=>"login"}
+  [4;35;1mAppUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `app_users`[0m
+  [4;36;1mAppUser Load (0.2ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mUserType Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `user_types`[0m
+  [4;36;1mUserType Load (0.1ms)[0m   [0;1mSELECT * FROM `user_types` WHERE (`user_types`.`id` = 1) [0m
+Redirected to http://localhost:3000/contracts/list
+  [4;35;1mGatepass Load (0.2ms)[0m   [0mSELECT * FROM `gatepasses` WHERE (`gatepasses`.app_user_id = 14) [0m
+Completed in 37ms (DB: 4) | 302 Found [http://localhost/]
+  [4;36;1mRule Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `rules`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mConfigParameter Load (0.1ms)[0m   [0mSELECT * FROM `config_parameters` WHERE (name = 'is_csrf_enabled') LIMIT 1[0m
+  [4;36;1mConfigParameter Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `config_parameters`[0m
+  [4;35;1mConfigValue Load (0.3ms)[0m   [0mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 30 AND (user_id IS NULL)) LIMIT 1[0m
+  [4;36;1mConfigValue Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `config_values`[0m
+
+
+Processing ContractsController#list (for 127.0.0.1 at 2012-11-28 16:05:59) [GET]
+  Parameters: {"action"=>"list", "controller"=>"contracts"}
+  [4;35;1mAppUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `app_users`[0m
+  [4;36;1mAppUser Load (0.1ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;36;1mapp_modules_app_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `app_modules_app_users`[0m
+  [4;35;1mAppModule Load (0.1ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;36;1mAppModule Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `app_modules`[0m
+  [4;35;1mUserRole Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mUserRole Load (0.1ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;35;1mapp_modules_user_roles Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `app_modules_user_roles`[0m
+  [4;36;1mAppModule Load (0.1ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+Rendering template within layouts/contracts
+Rendering contracts/list
+  [4;35;1mHelpScreencast Exists (0.1ms)[0m   [0mSELECT `help_screencasts`.id FROM `help_screencasts` WHERE (`help_screencasts`.`app_layout` = 'contracts') LIMIT 1[0m
+  [4;36;1mHelpFaq Exists (0.1ms)[0m   [0;1mSELECT `help_faqs`.id FROM `help_faqs` WHERE (`help_faqs`.`app_layout` = 'contracts') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `config_parameters` WHERE (name = 'is_csrf_enabled') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 30 AND (user_id IS NULL)) LIMIT 1[0m
+Rendered shared/_header (2.1ms)
+Rendered contracts/_show_children_folders (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `help_screencasts`.id FROM `help_screencasts` WHERE (`help_screencasts`.`app_layout` = 'contracts') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `help_faqs`.id FROM `help_faqs` WHERE (`help_faqs`.`app_layout` = 'contracts') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;36;1mConfigParameter Load (0.1ms)[0m   [0;1mSELECT * FROM `config_parameters` WHERE (name = 'is_static_globalization_enabled') LIMIT 1[0m
+  [4;35;1mConfigValue Load (0.1ms)[0m   [0mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 24 AND (user_id IS NULL)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mAppTab Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `app_tabs`[0m
+  [4;35;1mAppTab Load (0.1ms)[0m   [0mSELECT * FROM `app_tabs` WHERE (`app_tabs`.`name` = 'Contract Models') LIMIT 1[0m
+  [4;36;1mapp_sub_modules_app_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `app_sub_modules_app_users`[0m
+  [4;35;1mAppSubModule Load (0.0ms)[0m   [0mSELECT * FROM `app_sub_modules` INNER JOIN `app_sub_modules_app_users` ON `app_sub_modules`.id = `app_sub_modules_app_users`.app_sub_module_id WHERE (`app_sub_modules_app_users`.app_user_id = 14 ) [0m
+  [4;36;1mAppSubModule Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `app_sub_modules`[0m
+  [4;35;1mapp_sub_modules_user_roles Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `app_sub_modules_user_roles`[0m
+  [4;36;1mAppSubModule Load (0.2ms)[0m   [0;1mSELECT * FROM `app_sub_modules` INNER JOIN `app_sub_modules_user_roles` ON `app_sub_modules`.id = `app_sub_modules_user_roles`.app_sub_module_id WHERE (`app_sub_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;35;1mAppSubModule Load (0.2ms)[0m   [0mSELECT * FROM `app_sub_modules` WHERE (`app_sub_modules`.`name` = 'Select All') LIMIT 1[0m
+  [4;36;1mAppUsersRolesMasterTab Load (0.1ms)[0m   [0;1mSELECT * FROM `app_users_roles_master_tabs` WHERE (app_sub_module_id in(7,33,34,39,16,17,25,26,27,37,19,20,3,5,35,36) and is_readonly = 1 and app_tab_id = 10 and ((config_tab_id = 5 and config_tab_type = 'UserRole') or (config_tab_id = 14 and config_tab_type = 'AppUser'))) LIMIT 1[0m
+  [4;35;1mUserType Columns (7.6ms)[0m   [0mSHOW FIELDS FROM `user_types`[0m
+  [4;36;1mUserType Load (0.1ms)[0m   [0;1mSELECT * FROM `user_types` WHERE (`user_types`.`id` = 1) [0m
+  [4;35;1mUserType Load (0.1ms)[0m   [0mSELECT * FROM `user_types` WHERE (`user_types`.`name` = 'Pramata') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_types` WHERE (`user_types`.`name` = 'Pramata') LIMIT 1[0m
+Rendered shared/_navigation_menu (94.4ms)
+  [4;35;1mConfigParameter Load (0.1ms)[0m   [0mSELECT * FROM `config_parameters` WHERE (name = 'enable_quick_search_for_pramata') LIMIT 1[0m
+  [4;36;1mConfigValue Load (0.1ms)[0m   [0;1mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 4 AND (user_id IS NULL)) LIMIT 1[0m
+Rendered shared/_pageheader (112.3ms)
+Rendered shared/_footer (0.5ms)
+Completed in 265ms (View: 216, DB: 21) | 200 OK [http://localhost/contracts/list]
+  [4;35;1mRule Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `rules`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mConfigParameter Load (0.1ms)[0m   [0;1mSELECT * FROM `config_parameters` WHERE (name = 'is_csrf_enabled') LIMIT 1[0m
+  [4;35;1mConfigParameter Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `config_parameters`[0m
+  [4;36;1mConfigValue Load (0.1ms)[0m   [0;1mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 30 AND (user_id IS NULL)) LIMIT 1[0m
+  [4;35;1mConfigValue Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config_values`[0m
+
+
+Processing ContractsController#get_statuses (for 127.0.0.1 at 2012-11-28 16:06:00) [POST]
+  Parameters: {"action"=>"get_statuses", "controller"=>"contracts"}
+  [4;36;1mAppUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `app_users`[0m
+  [4;35;1mAppUser Load (0.2ms)[0m   [0mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mapp_modules_app_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `app_modules_app_users`[0m
+  [4;36;1mAppModule Load (0.1ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;35;1mAppModule Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `app_modules`[0m
+  [4;36;1mUserRole Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mUserRole Load (0.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;36;1mapp_modules_user_roles Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `app_modules_user_roles`[0m
+  [4;35;1mAppModule Load (0.1ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;36;1mContractPoStatusType Load (0.2ms)[0m   [0;1mSELECT * FROM `contract_po_status_types` ORDER BY position[0m
+  [4;35;1mContractPoStatusType Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contract_po_status_types`[0m
+  [4;36;1mContractResource Count (0.2ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=17)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=18)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=25)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=26)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=27)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=28)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=30)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=31)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=32)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=33)[0m
+  [4;36;1mContractResource Count (0.2ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=42)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=43)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=44)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=1)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=2)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=5)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=8)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=11)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=3)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=4)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=6)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=7)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=9)[0m
+  [4;35;1mContractResource Count (0.2ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=12)[0m
+  [4;36;1mContractResource Count (0.2ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=10)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=13)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=23)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=22)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=14)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=21)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=19)[0m
+  [4;35;1mContractResource Count (0.2ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=16)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=24)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=20)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=15)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=29)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=34)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=35)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=36)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=37)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=38)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=39)[0m
+  [4;36;1mContractResource Count (0.1ms)[0m   [0;1mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=40)[0m
+  [4;35;1mContractResource Count (0.1ms)[0m   [0mSelect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id=41)[0m
+  [4;36;1mContract Count (0.2ms)[0m   [0;1mselect COUNT(id) from contract_resources where app_user_id=14 and contract_id in (Select id from contracts where contract_po_status_type_id in (17,18,25,26,27,28,30,31,32,33,42,43,44,1,2,5,8,11,3,4,6,7,9,12,10,13,23,22,14,21,19,16,24,20,15,29,34,35,36,37,38,39,40,41))[0m
+Rendered contracts/_get_statuses (148.9ms)
+Completed in 255ms (View: 148, DB: 16) | 200 OK [http://localhost/contracts/get_statuses]
+  [4;35;1mRule Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `rules`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect value_boolean from config_parameters cp inner join config_values cv on cp.id=cv.config_parameter_id where name='is_static_globalization_enabled'[0m
+  [4;36;1mConfigParameter Load (0.1ms)[0m   [0;1mSELECT * FROM `config_parameters` WHERE (name = 'is_csrf_enabled') LIMIT 1[0m
+  [4;35;1mConfigParameter Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `config_parameters`[0m
+  [4;36;1mConfigValue Load (0.1ms)[0m   [0;1mSELECT * FROM `config_values` WHERE (`config_values`.config_parameter_id = 30 AND (user_id IS NULL)) LIMIT 1[0m
+  [4;35;1mConfigValue Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config_values`[0m
+
+
+Processing ContractsController#show_contracts_status (for 127.0.0.1 at 2012-11-28 16:06:00) [GET]
+  Parameters: {"action"=>"show_contracts_status", "controller"=>"contracts"}
+  [4;36;1mAppUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `app_users`[0m
+  [4;35;1mAppUser Load (0.1ms)[0m   [0mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mapp_modules_app_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `app_modules_app_users`[0m
+  [4;36;1mAppModule Load (0.1ms)[0m   [0;1mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;35;1mAppModule Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `app_modules`[0m
+  [4;36;1mUserRole Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mUserRole Load (0.3ms)[0m   [0mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;36;1mapp_modules_user_roles Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `app_modules_user_roles`[0m
+  [4;35;1mAppModule Load (0.1ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `app_users` WHERE (`app_users`.`id` = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_app_users` ON `app_modules`.id = `app_modules_app_users`.app_module_id WHERE (`app_modules_app_users`.app_user_id = 14 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (`user_roles`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `app_modules` INNER JOIN `app_modules_user_roles` ON `app_modules`.id = `app_modules_user_roles`.app_module_id WHERE (`app_modules_user_roles`.user_role_id = 5 ) [0m
+Rendered contracts/_filter_pontus_number (2.0ms)
+  [4;36;1mContractPoStatusType Load (0.2ms)[0m   [0;1mSELECT * FROM `contract_po_status_types` ORDER BY position[0m
+  [4;35;1mContractPoStatusType Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contract_po_status_types`[0m
+  [4;36;1mIntakeContractType Load (0.1ms)[0m   [0;1mSELECT * FROM `intake_contract_types` ORDER BY id[0m
+  [4;35;1mIntakeContractType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `intake_contract_types`[0m
+Rendered contracts/_filter_contracts (74.9ms)
+Rendered contracts/_display_contract_list (6.3ms)
+  [4;36;1mAppUser Load (0.4ms)[0m   [0;1mselect timestampdiff(DAY, last_password_change_time, now()) as days_lapsed from app_users where id =14[0m
+Rendered contracts/_show_contracts_status (96.2ms)
+Completed in 136ms (View: 96, DB: 12) | 200 OK [http://localhost/contracts/show_contracts_status]
+  [4;35;1mRule Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `rules`[0m

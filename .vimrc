@@ -131,8 +131,15 @@ function! WrapWords()
   endif
 endfunc
 
+" Run ruby script 
+function! RunRuby()
+  :w
+  let name = input('Enter Argument (if any): ')  
+  execute ':!ruby % '.name
+endfunc
+
 nnoremap <C-w> :call WrapWords()<cr>
 nnoremap <C-n> :call NumberToggle()<cr>
 nnoremap <C-t> :TagbarToggle<cr>
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-
+map <F6> :call RunRuby()<cr>
